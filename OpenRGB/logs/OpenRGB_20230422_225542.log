@@ -1,0 +1,18 @@
+    OpenRGB v0.8
+    Commit:  from 
+    Launched: 20230422_225542
+====================================================================================================
+
+0     |Info:    Found file: Main.orp attempting to validate header
+0     |Info:    Valid v3 profile found for Main
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    |               Start device detection               |
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    Initializing HID interfaces: Success
+1003  |Info:    ------------------------------------------------------
+1003  |Info:    |             Detecting I2C interfaces               |
+1003  |Info:    ------------------------------------------------------
+1003  |Info:    Registering I2C interface: /dev/i2c-3 Device 1022:790B Subsystem: 1043:8877
+1003  |Info:    Registering I2C interface: /dev/i2c-10 Device 10DE:2704 Subsystem: 10DE:167A
+1003  |Info:    Registering I2C interface: /dev/i2c-1 Device 1022:790B Subsystem: 1043:8877
+1003  |Info:    Registering I2C interface: /dev/i2c-8 Device 10DE:2704 Subsystem: 10DE:167A

@@ -1,0 +1,44 @@
+    OpenRGB v0.8
+    Commit:  from 
+    Launched: 20230319_111726
+====================================================================================================
+
+0     |Info:    Found file: Main.orp attempting to validate header
+0     |Info:    Valid v3 profile found for Main
+1009  |Info:    ------------------------------------------------------
+1009  |Info:    |               Start device detection               |
+1009  |Info:    ------------------------------------------------------
+1010  |Info:    Initializing HID interfaces: Success
+1012  |Info:    ------------------------------------------------------
+1012  |Info:    |             Detecting I2C interfaces               |
+1012  |Info:    ------------------------------------------------------
+1012  |Info:    Registering I2C interface: /dev/i2c-3 Device 1022:790B Subsystem: 1043:8877
+1012  |Info:    Registering I2C interface: /dev/i2c-10 Device 10DE:2704 Subsystem: 10DE:167A
+1012  |Info:    Registering I2C interface: /dev/i2c-1 Device 1022:790B Subsystem: 1043:8877
+1012  |Info:    Registering I2C interface: /dev/i2c-8 Device 10DE:2704 Subsystem: 10DE:167A
+1012  |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+1012  |Info:    Registering I2C interface: /dev/i2c-6 Device 0000:0000 Subsystem: 0000:0000
+1012  |Info:    Registering I2C interface: /dev/i2c-4 Device 1002:164E Subsystem: 1043:8877
+1012  |Info:    Registering I2C interface: /dev/i2c-11 Device 10DE:2704 Subsystem: 10DE:167A
+1012  |Info:    Registering I2C interface: /dev/i2c-2 Device 1022:790B Subsystem: 1043:8877
+1012  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1012  |Info:    Registering I2C interface: /dev/i2c-9 Device 10DE:2704 Subsystem: 10DE:167A
+1012  |Info:    Registering I2C interface: /dev/i2c-7 Device 10DE:2704 Subsystem: 10DE:167A
+1012  |Info:    Registering I2C interface: /dev/i2c-5 Device 1002:164E Subsystem: 1043:8877
+1012  |Info:    ------------------------------------------------------
+1012  |Info:    |               Detecting I2C devices                |
+1012  |Info:    ------------------------------------------------------
+1715  |Info:    ------------------------------------------------------
+1715  |Info:    |               Detecting I2C PCI devices            |
+1715  |Info:    ------------------------------------------------------
+1715  |Info:    ------------------------------------------------------
+1715  |Info:    |               Detecting HID devices                |
+1715  |Info:    ------------------------------------------------------
+1793  |Info:    [ASUS TUF GAMING X670E-PLUS] Registering RGB controller
+1793  |Info:    ------------------------------------------------------
+1793  |Info:    |              Detecting other devices               |
+1793  |Info:    ------------------------------------------------------
+1807  |Info:    ------------------------------------------------------
+1807  |Info:    |                Detection completed                 |
+1807  |Info:    ------------------------------------------------------
+1807  |Info:    Profile loading: Succeeded for ASUS TUF GAMING X670E-PLUS @ HID: /dev/hidraw4

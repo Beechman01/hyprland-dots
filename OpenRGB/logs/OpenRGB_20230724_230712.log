@@ -1,0 +1,47 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20230724_230712
+====================================================================================================
+
+0     |Info:    Found file: Main.orp attempting to validate header
+0     |Info:    Valid v3 profile found for Main
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    |               Start device detection               |
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    Initializing HID interfaces: Success
+1004  |Info:    ------------------------------------------------------
+1004  |Info:    |             Detecting I2C interfaces               |
+1004  |Info:    ------------------------------------------------------
+1005  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2704 Subsystem: 10DE:167A
+1005  |Info:    Registering I2C interface: /dev/i2c-10 Device 1002:164E Subsystem: 1043:8877
+1005  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2704 Subsystem: 10DE:167A
+1005  |Info:    Registering I2C interface: /dev/i2c-8 Device 1022:790B Subsystem: 1043:8877
+1005  |Info:    Registering I2C interface: /dev/i2c-6 Device 1022:790B Subsystem: 1043:8877
+1005  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2704 Subsystem: 10DE:167A
+1005  |Warning: [i2c_smbus_linux] Failed to read i2c device PCI device ID
+1005  |Info:    Registering I2C interface: /dev/i2c-11 Device 0000:0000 Subsystem: 0000:0000
+1005  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2704 Subsystem: 10DE:167A
+1005  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1005  |Info:    Registering I2C interface: /dev/i2c-9 Device 1002:164E Subsystem: 1043:8877
+1005  |Info:    Registering I2C interface: /dev/i2c-7 Device 1022:790B Subsystem: 1043:8877
+1005  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2704 Subsystem: 10DE:167A
+1005  |Info:    ------------------------------------------------------
+1005  |Info:    |               Detecting I2C devices                |
+1005  |Info:    ------------------------------------------------------
+1050  |Warning: [PluginManager] Plugin /home/beechman/.config/OpenRGB/plugins/OpenRGBEffectsPlugin_0.8_Linux_64_a82937c.so has an incompatible API version
+1949  |Info:    ------------------------------------------------------
+1949  |Info:    |               Detecting I2C PCI devices            |
+1949  |Info:    ------------------------------------------------------
+1950  |Info:    ------------------------------------------------------
+1950  |Info:    |               Detecting HID devices                |
+1950  |Info:    ------------------------------------------------------
+2025  |Info:    [ASUS TUF GAMING X670E-PLUS] Registering RGB controller
+2025  |Info:    ------------------------------------------------------
+2025  |Info:    |            Detecting libusb HID devices            |
+2025  |Info:    ------------------------------------------------------
+2118  |Info:    ------------------------------------------------------
+2118  |Info:    |              Detecting other devices               |
+2118  |Info:    ------------------------------------------------------
+2125  |Info:    ------------------------------------------------------
+2125  |Info:    |                Detection completed                 |
+2125  |Info:    ------------------------------------------------------

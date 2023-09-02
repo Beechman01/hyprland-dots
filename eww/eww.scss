@@ -1,0 +1,222 @@
+
+/* This is a comment */
+// This is also a comment
+
+
+*{
+  border-radius: 10px;
+}
+
+.genwin {
+  background-color: transparent;
+}
+
+.clock {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.clock-lines {
+  background-color: rgba(0,0,0,0.7);
+  padding-top: 20px;
+}
+
+.clock-box {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dashboard-time-back {
+  color: #85acfb;
+  font-family: DSEG7 Classic Mini;
+  font-weight: bold;
+  font-size:60px;
+  opacity: 0.2;
+  padding-top: 20px;
+  background-color: transparent;
+}
+
+.dashboard-time {
+  color: #85acfb;
+  font-family: DSEG7 Classic Mini;
+  font-weight: bold;
+  font-size: 60px;
+  padding-top: 20px;
+  background-color: transparent;
+}
+
+.dashboard-date {
+  color: #9c64b1;
+  font-family: Silent Reaction;
+  font-size: 28px;
+  padding-top: 75px;
+  background-color: transparent;
+}
+
+.fetch-box {
+  background-color: transparent;
+  font-family: Terminus;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 15px;
+}
+
+.fetch {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.cpu-info {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.nv-info {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.hypr-splash {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.splash {
+  font-family: Silent Reaction;
+  color: #9c64b1;
+  font-size: 30px;
+  padding: 5px;
+  text-shadow: 2px 2px rgba(133,172,251,0.3);
+  
+}
+
+.process {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.process-box {
+  font-family: Terminus;
+  font-size: 20px;
+  //padding-top: 15px;
+  padding-left:10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.proc-widget {
+  background-color: transparent;
+}
+
+.title {
+  color: #85acfb;
+  padding-top: 15px;
+}
+
+.proc {
+  color: #9c64b1;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  font-size: 17px;
+}
+
+.left {
+  color: #85acfb;
+}
+
+.right {
+  color: #9c64b1;
+}
+
+.cpus-left {
+  background-color: transparent;
+}
+
+.cpus-left-box {
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  
+}
+
+.circ-progress {
+  background-color: #85acfb;
+  color: #9c64b1;
+  padding: 100px;
+  
+}
+
+.volume {
+  background-color: rgba(0,0,0,0.7);
+}
+
+.volume-wid {
+  background-color: transparent;
+  color: #9c64b1;
+  padding-top: 10px;
+}
+
+.scale {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.fetch-box scale trough {
+  background-color: #85acfb;
+  min-width: 15px;
+  min-height: 110px;
+}
+
+.fetch-box scale trough slider {
+  background-color: transparent;
+  color: transparent;
+}
+
+.fetch-box trough highlight {
+  background-color: #9c64b1;
+  
+}
+
+.clock-box scale trough{
+  background-color: #85acfb;
+  min-width: 50px;
+  min-height: 12px;
+}
+
+.clock-box scale trough slider {
+  background-color: transparent;
+  color: transparent;
+  
+}
+
+.clock-box scale trough highlight {
+  background-color: #9c64b1;
+}
+
+.volume-icon {
+  color: #85acfb;
+  font-size: 28px;
+}
+
+.inactive {
+  color: #85acfb;
+}
+
+.active {
+  color: #9c64b1;
+  background-color: transparent;
+}
+
+.ws {
+  background-color: rgba(0,0,0,0.7);
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right:7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.workspace {
+  background-color: transparent;
+}
+
+.internet {
+  background-color: rgba(0,0,0,0.7);
+}
+
+

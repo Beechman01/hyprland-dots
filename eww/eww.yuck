@@ -1,0 +1,326 @@
+;=============;
+;; Variables ;;
+;=============;
+
+
+;; clock
+
+(defvar dashboard-time-back "00:00:00")
+(defpoll dashboard-time :interval "1s" "~/.config/eww/scripts/time.sh --time")
+(defpoll dashboard-date :interval "1800s" "~/.config/eww/scripts/time.sh --date")
+
+;; clock lines
+
+(defpoll hour :interval "1s" "~/.config/eww/scripts/lua/hour.lua")
+(defpoll minute :interval "1s" "~/.config/eww/scripts/lua/minute.lua")
+(defpoll second :interval "1s" "~/.config/eww/scripts/lua/second.lua")
+
+;; fetch
+
+(defpoll hostname :interval "86400s" "echo $USER")
+(defpoll distro :interval "86400s" "~/.config/eww/scripts/fetch.sh --distro")
+(defpoll session :interval "86400s" "echo $DESKTOP_SESSION")
+(defpoll kernel :interval "86400s" "~/.config/eww/scripts/fetch.sh --kernel")
+(defpoll shell :interval "86400s" "echo $SHELL")
+
+(defpoll cpu-name :interval "86400s" "~/.config/eww/scripts/fetch.sh --cpu-name")
+(defpoll cpu-temp :interval "1s" "~/.config/eww/scripts/fetch.sh --cpu-temp")
+
+(defpoll nv-name :interval "86400s" "~/.config/eww/scripts/fetch.sh --nv-name")
+(defpoll nv-driver :interval "86400s" "~/.config/eww/scripts/fetch.sh --nv-driver")
+(defpoll nv-temp :interval "1s" "~/.config/eww/scripts/fetch.sh --nv-temp")
+(defpoll nv-usage :interval "1s" "~/.config/eww/scripts/fetch.sh --nv-usage")
+
+;; processes
+
+(defpoll cpu :interval "1s" "~/.config/eww/scripts/processes.sh --cpu")
+(defpoll mem :interval "1s" "~/.config/eww/scripts/processes.sh --mem")
+(defpoll comm :interval "1s" "~/.config/eww/scripts/processes.sh --comm")
+
+;; volume
+
+(defpoll volume-text :interval "1s" "~/.config/eww/scripts/volume.sh --text")
+(defpoll volume-num :interval "1s" "~/.config/eww/scripts/volume.sh --num")
+
+;; extras
+
+(defpoll splash :interval "86400s" "~/.config/eww/scripts/hypr-splash.sh")
+
+;============;
+;; Widgets  ;;
+;============;
+
+
+;;clock
+
+(defwidget clock []
+  (overlay :class "clock" :vexpand "false" :hexpand "true" :halign "center" :height 150 :width 395 
+    (label :class "dashboard-time-back" :valign "start" :wrap "false" :text "${dashboard-time-back}")
+    (label :class "dashboard-time" :valign "start" :wrap "false" :text "${dashboard-time}")
+    (label :class "dashboard-date" :valign "center" :wrap "false" :text "${dashboard-date}"))
+    
+)
+
+;; clock lines
+
+(defwidget clock-lines []
+ (centerbox :class "clock-box" :vexpand "false" :hexpand "false" :halign "center" :height 80 :width 365 :orientation "vertical"
+   (scale :class "bar" :valign "start" :value "${hour}" )
+   (scale :class "bar" :valign "center" :value "${minute}" )
+   (scale :class "bar" :valign "end" :value "${second}" )
+  )
+)
+
+;; fetch operating system info
+
+(defwidget fetch []
+  (box :class "fetch-box" :vexpand "true" :hexpand "false" :halign "center" :height 120 :width 365 :orientation "vertical"
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Hostname: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${hostname}")
+    )
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Distro: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${distro}")
+    )
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Session: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${session}")
+    )
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Kernel: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${kernel}")
+    )
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Shell: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${shell}")
+    ) 
+  )
+)
+
+;; fetch cpu info
+
+(defwidget fetch-cpu[]
+  (box :class "fetch-box" :vexpand "true" :hexpand "false" :halign "center" :height 120 :width 365 :orientation "vertical"
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "CPU: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${cpu-name}")
+    )
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Freq: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${EWW_CPU.cores[0].freq} Mhz")
+    )
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Temp: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${cpu-temp}")
+    )
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Usage: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${round(EWW_CPU.avg,0)} %" )
+    ) 
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Ram: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${round(EWW_RAM["used_mem_perc"],2)} %" )
+    )
+  )
+)
+
+(defwidget fetch-nv[]
+  (box :class "fetch-box" :vexpand "true" :hexpand "false" :halign "center" :height 100 :width 365 :orientation "vertical"
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "GPU: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${nv-name}")
+    )
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Driver: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${nv-driver}")
+    )
+    (centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Temp: ")
+      (label :class "center" :halign "center" :valign "start" :text "   ")
+      (label :class "right" :halign "end" :valign "start" :text "${nv-temp}°C")
+    )
+    ;(centerbox :class "fetch-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+    ;  (label :class "left" :halign "start" :valign "start" :text "Usage: ")
+    ;  (label :class "center" :halign "center" :valign "start" :text "   ")
+    ;  (label :class "right" :halign "end" :valign "start" :text "${nv-usage}")
+    ;)
+  )
+)
+
+
+;; top processes
+
+(defwidget processes[]
+  (centerbox :class "process-box" :vexpand "false" :hexpand "false" :halign "center" :height 20 :width 365 :orientation "vertical"
+    (centerbox :class "proc-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+       (label :class "title" :halign "start" :valign "start" :text "Top Processes")
+       (label :class "title" :halign "center" :valign "start" :text "cpu %")
+       (label :class "title" :halign "end" :valign "start" :text "mem %")
+    )
+    (box :class "blank" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 1 :orientation "vertical")
+    (centerbox :class "proc-widget" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "horizontal"
+       (label :class "proc" :halign "start" :valign "start" :text "${comm}")
+       (label :class "proc" :halign "center" :valign "start" :text "${cpu}")
+       (label :class "proc" :halign "end" :valign "start" :text "${mem}")
+    )
+  )
+)   
+
+;; extras
+
+(defwidget hypr-splash[]
+  (box :class "fetch-box" :vexpand "true" :hexpand "false" :halign "center" :height 10 :width 365 :orientation "vertical"
+    (label :class "splash" :halign "center" :valign "center" :wrap "true" :text "${splash}")
+  )
+)
+
+;; volume
+
+(defwidget volume-widget[]
+  (centerbox :class "fetch-box" :vexpand "true" :hexpand "false" :halign "center" :height 10 :width 10 :orientation "vertical"
+    (scale :class "scale" :halign "center" :valign "start" :height 100 :min 0 :max 100 :orientation "vertical" :flipped "true" :value "${volume-num}") 
+    (label :class "volume-wid" :halign "center" :valign "center" :text "${volume-text}")
+    (label :class "volume-icon" :halign "center" :valign "end" :text "󰋋")
+  )
+)
+
+;(deflisten volume "~/.config/eww/scripts/python/volume.py")
+
+;(defwidget volume-widget{}
+;  (literal :content volume)
+;)
+
+
+
+;; workspaces
+
+
+(deflisten ws1 "~/.config/eww/scripts/python/workspace.py")
+
+(defwidget workspaces []
+  (literal :content ws1)
+)
+
+;; internet
+
+(defwidget internet[]
+  (centerbox :class "fetch-box" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 1 :orientation "vertical"
+    (label :class "title" :halign "start" :valign "start" :text "Internet: ")
+    (centerbox :class "net" :vexpand "false" :hexpand "false" :halign "center" :height 25 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Up: ")
+      (label :class "center" :halign "center" :valign "start" :text " ")
+      (label :class "right" :halign "end" :valign "start" :text "${round((EWW_NET["eno1"].NET_UP / 1000) / 1000,3)} Mb")
+    )
+    (centerbox :class "net" :vexpand "false" :hexpand "false" :halign "center" :height 25 :width 365 :orientation "horizontal"
+      (label :class "left" :halign "start" :valign "start" :text "Down: ")
+      (label :class "center" :halign "center" :valign "start" :text " ")
+      (label :class "right" :halign "end" :valign "start" :text "${round((EWW_NET["eno1"].NET_DOWN / 1000) / 1000,3)} Mb")
+    )
+  )
+)
+
+(defwidget test[]
+  (box :class "blank" :vexpand "false" :hexpand "false" :halign "center" :height 10 :width 1 :orientation "vertical"
+;    (label :class "test" :wrap "true" :text "${EWW_EXECUTABLE}")
+    (image :class "image" :path "images/test_1280x720.png" :image-width 160 :image-height 90)
+  )
+)
+
+;============;
+;; Windows  ;;
+;============;
+
+
+;; clock
+
+(defwindow clock :class "genwin" :stacking "fg" :monitor 2 :focusable "false" 
+  :geometry (geometry :x 675 :y 450 :width 400 :height 120 :anchor "top center")
+  (clock)
+)
+
+;; Clock lines
+(defwindow clock-lines :class "genwin" :stacking "fg" :monitor 2 :focusable "false"
+ :geometry (geometry :x 675 :y 610 :width 400 :height 80 :anchor "top center")
+ (clock-lines)
+)
+
+;; fetch
+
+(defwindow fetch :class "genwin" :stacking "fg" :monitor 2 :focusable "false"
+  :geometry (geometry :x 675 :y 735 :width 400 :height 120 :anchor "top center")
+  (fetch)
+)
+
+;; processes
+
+(defwindow process :class "genwin" :stacking "fg" :monitor 2 :focusable "false"
+  :geometry (geometry :x 675 :y 880 :width 400 :height 1 :anchor "top center")
+  (processes)
+)
+
+(defwindow cpu-info :class "genwin" :stacking "fg" :monitor 2 :focusable "false"
+  :geometry (geometry :x 675 :y 1120 :width 400 :height 1 :anchor "top center")
+  (fetch-cpu)
+)
+
+(defwindow nv-info :class "genwin" :stacking "fg" :monitor 2 :focusable "false"
+  :geometry (geometry :x 675 :y 1265 :width 400 :height 1 :anchor "top center")
+  (fetch-nv)
+)
+
+(defwindow internet :class "genwin" :stacking "fg" :monitor 2 :focusable "false"
+  :geometry (geometry :x 675 :y 1375 :width 400 :height 100 :anchor "top center")
+  (internet)
+)
+
+
+(defwindow hypr-splash :class "genwin" :stacking "fg" :monitor 2 :focusable "false" 
+  :geometry (geometry :x 675 :y 1505 :width 400 :height 1 :anchor "top center")
+  (hypr-splash)
+)
+
+; volume
+
+(defwindow volume :class "genwin" :stacking "fg" :monitor 2 :focusable "false" 
+  :geometry (geometry :x 275 :y 625 :width 40 :height 1 :anchor "top right")
+  (volume-widget)
+)
+
+;; workspaces
+
+(defwindow workspace :class "genwin" :stacking "fg" :monitor 2 :focusable "false" 
+  :geometry (geometry :x 285 :y 625 :width 40 :height 1 :anchor "top left")
+  (workspaces)
+)
+
+(defwindow test :class "genwin" :stacking "fg" :monitor 2 :focusable "false" 
+  :geometry (geometry :x 100 :y 100 :width 40 :height 1 :anchor "top left")
+  (test)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

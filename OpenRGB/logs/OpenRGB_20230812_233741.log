@@ -1,0 +1,43 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20230812_233741
+====================================================================================================
+
+6     |Info:    Found file: Main.orp attempting to validate header
+7     |Info:    Valid v3 profile found for Main
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    |               Start device detection               |
+1008  |Info:    ------------------------------------------------------
+1009  |Info:    Initializing HID interfaces: Success
+1013  |Info:    ------------------------------------------------------
+1013  |Info:    |             Detecting I2C interfaces               |
+1013  |Info:    ------------------------------------------------------
+1013  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2704 Subsystem: 10DE:167A
+1013  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2704 Subsystem: 10DE:167A
+1013  |Info:    Registering I2C interface: /dev/i2c-8 Device 1022:790B Subsystem: 1043:8877
+1013  |Info:    Registering I2C interface: /dev/i2c-6 Device 1022:790B Subsystem: 1043:8877
+1013  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2704 Subsystem: 10DE:167A
+1013  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2704 Subsystem: 10DE:167A
+1013  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1013  |Info:    Registering I2C interface: /dev/i2c-7 Device 1022:790B Subsystem: 1043:8877
+1013  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2704 Subsystem: 10DE:167A
+1013  |Info:    ------------------------------------------------------
+1013  |Info:    |               Detecting I2C devices                |
+1013  |Info:    ------------------------------------------------------
+1952  |Info:    ------------------------------------------------------
+1952  |Info:    |               Detecting I2C PCI devices            |
+1952  |Info:    ------------------------------------------------------
+1952  |Info:    ------------------------------------------------------
+1952  |Info:    |               Detecting HID devices                |
+1952  |Info:    ------------------------------------------------------
+2026  |Info:    [ASUS TUF GAMING X670E-PLUS] Registering RGB controller
+2026  |Info:    ------------------------------------------------------
+2026  |Info:    |            Detecting libusb HID devices            |
+2026  |Info:    ------------------------------------------------------
+2119  |Info:    ------------------------------------------------------
+2119  |Info:    |              Detecting other devices               |
+2119  |Info:    ------------------------------------------------------
+2125  |Info:    ------------------------------------------------------
+2125  |Info:    |                Detection completed                 |
+2125  |Info:    ------------------------------------------------------
+2125  |Info:    Profile loading: Succeeded for ASUS TUF GAMING X670E-PLUS @ HID: /dev/hidraw2

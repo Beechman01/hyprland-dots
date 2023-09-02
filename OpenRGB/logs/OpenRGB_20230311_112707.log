@@ -1,0 +1,9 @@
+    OpenRGB v0.8
+    Commit:  from 
+    Launched: 20230311_112707
+====================================================================================================
+
+0     |Info:    Found file: Main.orp attempting to validate header
+0     |Info:    Valid v3 profile found for Main
+365   |Info:    Profile loading: Succeeded for Sony DualShock 4 @ HID: /dev/hidraw4
+365   |Info:    Profile loading: Succeeded for ASUS TUF GAMING X670E-PLUS @ HID: /dev/hidraw0
