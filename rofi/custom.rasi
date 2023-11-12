@@ -1,0 +1,70 @@
+
+
+
+* {
+  background-color: rgba(0,0,0,0%);
+  text-color: rgb(133,172,251);
+  border-color: rgb(186,105,200);
+  input-color: rgb(65,31,108);
+  selected-background: rgba(186,105,200,75%);
+  transparent: rgba(0,0,0,70%);
+}
+
+window {
+  location: center;
+  anchor: center;
+  width: 20%;
+  height: 20%;
+  padding: 6px;
+  border: 4px;
+  border-radius: 9px;
+  background-color: @transparent;
+}
+
+listview {
+  border: 9px 0px 0px;
+  border-color: @background-color;
+  padding: 4px 0px 0px;
+  columns: 1;
+  cycle: true;
+  spacing: 5px;
+  flow: vertical;
+  require-input: false;
+}
+
+element {
+  spacing: 5px;  
+}
+
+element selected { 
+  background-color: @selected-background;
+}
+
+inputbar {
+  children: [prompt,textbox-prompt-colon,entry,case-indicator];
+}
+
+prompt {
+    spacing:    0;
+    text-color: @text-color;
+}
+
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @text-color;
+}
+
+entry {
+    spacing:    0;
+    text-color: @text-color;
+    blink: true;
+}
+
+case-indicator {
+    spacing:    0;
+    text-color: @text-color;
+}
+
+
