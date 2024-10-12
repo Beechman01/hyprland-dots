@@ -1,0 +1,57 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20240527_143713
+====================================================================================================
+
+0     |Info:    Found file: Main.orp attempting to validate header
+0     |Info:    Valid v4 profile found for Main
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    |               Start device detection               |
+1001  |Info:    ------------------------------------------------------
+1001  |Info:    Initializing HID interfaces: Success
+1007  |Info:    ------------------------------------------------------
+1007  |Info:    |             Detecting I2C interfaces               |
+1007  |Info:    ------------------------------------------------------
+1008  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2704 Subsystem: 10DE:167A
+1008  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2704 Subsystem: 10DE:167A
+1008  |Info:    Registering I2C interface: /dev/i2c-8 Device 1022:790B Subsystem: 1043:8877
+1008  |Info:    Registering I2C interface: /dev/i2c-6 Device 1022:790B Subsystem: 1043:8877
+1008  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2704 Subsystem: 10DE:167A
+1008  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2704 Subsystem: 10DE:167A
+1008  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1008  |Info:    Registering I2C interface: /dev/i2c-7 Device 1022:790B Subsystem: 1043:8877
+1008  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2704 Subsystem: 10DE:167A
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    |               Detecting I2C devices                |
+1008  |Info:    ------------------------------------------------------
+1041  |Warning: [PluginManager] Plugin /home/beechman/.config/OpenRGB/plugins/OpenRGBEffectsPlugin_0.8_Linux_64_a82937c.so has an incompatible API version
+2026  |Info:    ------------------------------------------------------
+2026  |Info:    |               Detecting I2C PCI devices            |
+2026  |Info:    ------------------------------------------------------
+2027  |Info:    ------------------------------------------------------
+2027  |Info:    |               Detecting HID devices                |
+2027  |Info:    ------------------------------------------------------
+3496  |Info:    [Corsair K70 RGB] Registering RGB controller
+3516  |Info:    [Sony DualShock 4] Registering RGB controller
+3597  |Info:    [ASUS TUF GAMING X670E-PLUS] Registering RGB controller
+3597  |Info:    ------------------------------------------------------
+3597  |Info:    |            Detecting libusb HID devices            |
+3597  |Info:    ------------------------------------------------------
+3707  |Info:    ------------------------------------------------------
+3707  |Info:    |              Detecting other devices               |
+3707  |Info:    ------------------------------------------------------
+3714  |Info:    ------------------------------------------------------
+3714  |Info:    |                Detection completed                 |
+3714  |Info:    ------------------------------------------------------
+39017 |Info:    Found file: Main.orp attempting to validate header
+39017 |Info:    Valid v4 profile found for Main
+68286 |Info:    Found file: Main.orp attempting to validate header
+68286 |Info:    Valid v4 profile found for Main
+75874 |Info:    Found file: Main.orp attempting to validate header
+75874 |Info:    Valid v4 profile found for Main
+105598|Info:    Found file: Main.orp attempting to validate header
+105598|Info:    Valid v4 profile found for Main
+165348|Info:    Found file: Main.orp attempting to validate header
+165348|Info:    Valid v4 profile found for Main
+666060|Info:    Found file: Main.orp attempting to validate header
+666060|Info:    Valid v4 profile found for Main

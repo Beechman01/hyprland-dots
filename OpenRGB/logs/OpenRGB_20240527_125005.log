@@ -1,0 +1,85 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20240527_125005
+====================================================================================================
+
+7     |Info:    Found file: Main.orp attempting to validate header
+7     |Info:    Valid v4 profile found for Main
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    |               Start device detection               |
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    Initializing HID interfaces: Success
+1015  |Info:    ------------------------------------------------------
+1015  |Info:    |             Detecting I2C interfaces               |
+1015  |Info:    ------------------------------------------------------
+1015  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    Registering I2C interface: /dev/i2c-8 Device 1022:790B Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-6 Device 1022:790B Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1015  |Info:    Registering I2C interface: /dev/i2c-7 Device 1022:790B Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    ------------------------------------------------------
+1015  |Info:    |               Detecting I2C devices                |
+1015  |Info:    ------------------------------------------------------
+1049  |Warning: [PluginManager] Plugin /home/beechman/.config/OpenRGB/plugins/OpenRGBEffectsPlugin_0.8_Linux_64_a82937c.so has an incompatible API version
+2031  |Info:    ------------------------------------------------------
+2031  |Info:    |               Detecting I2C PCI devices            |
+2031  |Info:    ------------------------------------------------------
+2032  |Info:    ------------------------------------------------------
+2032  |Info:    |               Detecting HID devices                |
+2032  |Info:    ------------------------------------------------------
+3508  |Info:    [Corsair K70 RGB] Registering RGB controller
+3527  |Info:    [Sony DualShock 4] Registering RGB controller
+3610  |Info:    [ASUS TUF GAMING X670E-PLUS] Registering RGB controller
+3610  |Info:    ------------------------------------------------------
+3610  |Info:    |            Detecting libusb HID devices            |
+3610  |Info:    ------------------------------------------------------
+3719  |Info:    ------------------------------------------------------
+3719  |Info:    |              Detecting other devices               |
+3719  |Info:    ------------------------------------------------------
+3726  |Info:    ------------------------------------------------------
+3726  |Info:    |                Detection completed                 |
+3726  |Info:    ------------------------------------------------------
+20291 |Info:    Profile loading: Succeeded for Corsair K70 RGB @ HID: /dev/hidraw7
+20291 |Info:    Profile loading: Succeeded for Sony DualShock 4 @ HID: /dev/hidraw11
+20291 |Info:    Profile loading: Succeeded for ASUS TUF GAMING X670E-PLUS @ HID: /dev/hidraw5
+27838 |Info:    ------------------------------------------------------
+27838 |Info:    |               Start device detection               |
+27838 |Info:    ------------------------------------------------------
+27838 |Info:    Initializing HID interfaces: Success
+27844 |Info:    ------------------------------------------------------
+27844 |Info:    |             Detecting I2C interfaces               |
+27844 |Info:    ------------------------------------------------------
+27845 |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2704 Subsystem: 10DE:167A
+27845 |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2704 Subsystem: 10DE:167A
+27845 |Info:    Registering I2C interface: /dev/i2c-8 Device 1022:790B Subsystem: 1043:8877
+27845 |Info:    Registering I2C interface: /dev/i2c-6 Device 1022:790B Subsystem: 1043:8877
+27845 |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2704 Subsystem: 10DE:167A
+27845 |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2704 Subsystem: 10DE:167A
+27845 |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+27845 |Info:    Registering I2C interface: /dev/i2c-7 Device 1022:790B Subsystem: 1043:8877
+27845 |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2704 Subsystem: 10DE:167A
+27845 |Info:    ------------------------------------------------------
+27845 |Info:    |               Detecting I2C devices                |
+27845 |Info:    ------------------------------------------------------
+28862 |Info:    ------------------------------------------------------
+28862 |Info:    |               Detecting I2C PCI devices            |
+28862 |Info:    ------------------------------------------------------
+28863 |Info:    ------------------------------------------------------
+28863 |Info:    |               Detecting HID devices                |
+28863 |Info:    ------------------------------------------------------
+30334 |Info:    [Corsair K70 RGB] Registering RGB controller
+30354 |Info:    [Sony DualShock 4] Registering RGB controller
+30449 |Info:    [ASUS TUF GAMING X670E-PLUS] Registering RGB controller
+30449 |Info:    ------------------------------------------------------
+30449 |Info:    |            Detecting libusb HID devices            |
+30449 |Info:    ------------------------------------------------------
+30553 |Info:    ------------------------------------------------------
+30553 |Info:    |              Detecting other devices               |
+30553 |Info:    ------------------------------------------------------
+30554 |Info:    ------------------------------------------------------
+30554 |Info:    |                Detection completed                 |
+30554 |Info:    ------------------------------------------------------

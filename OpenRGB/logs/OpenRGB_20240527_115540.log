@@ -1,0 +1,45 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20240527_115540
+====================================================================================================
+
+7     |Info:    Found file: Main.orp attempting to validate header
+7     |Info:    Valid v4 profile found for Main
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    |               Start device detection               |
+1008  |Info:    ------------------------------------------------------
+1008  |Info:    Initializing HID interfaces: Success
+1014  |Info:    ------------------------------------------------------
+1014  |Info:    |             Detecting I2C interfaces               |
+1014  |Info:    ------------------------------------------------------
+1015  |Info:    Registering I2C interface: /dev/i2c-3 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    Registering I2C interface: /dev/i2c-1 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    Registering I2C interface: /dev/i2c-8 Device 1022:790B Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-6 Device 1022:790B Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    Registering I2C interface: /dev/i2c-2 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1015  |Info:    Registering I2C interface: /dev/i2c-7 Device 1022:790B Subsystem: 1043:8877
+1015  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2704 Subsystem: 10DE:167A
+1015  |Info:    ------------------------------------------------------
+1015  |Info:    |               Detecting I2C devices                |
+1015  |Info:    ------------------------------------------------------
+1127  |Warning: [PluginManager] Plugin /home/beechman/.config/OpenRGB/plugins/OpenRGBEffectsPlugin_0.8_Linux_64_a82937c.so has an incompatible API version
+2031  |Info:    ------------------------------------------------------
+2031  |Info:    |               Detecting I2C PCI devices            |
+2031  |Info:    ------------------------------------------------------
+2031  |Info:    ------------------------------------------------------
+2031  |Info:    |               Detecting HID devices                |
+2031  |Info:    ------------------------------------------------------
+3504  |Info:    [Corsair K70 RGB] Registering RGB controller
+3523  |Info:    [Sony DualShock 4] Registering RGB controller
+3601  |Info:    [ASUS TUF GAMING X670E-PLUS] Registering RGB controller
+3601  |Info:    ------------------------------------------------------
+3601  |Info:    |            Detecting libusb HID devices            |
+3601  |Info:    ------------------------------------------------------
+3919  |Info:    ------------------------------------------------------
+3919  |Info:    |              Detecting other devices               |
+3919  |Info:    ------------------------------------------------------
+3926  |Info:    ------------------------------------------------------
+3926  |Info:    |                Detection completed                 |
+3926  |Info:    ------------------------------------------------------
