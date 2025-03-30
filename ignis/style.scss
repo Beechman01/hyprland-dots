@@ -1,0 +1,145 @@
+* {
+    all: unset;
+    font-weight: bold;
+}
+
+// Colors from Catppuccin github repo https://github.com/catppuccin/catppuccin
+$mbg: rgba(0, 0, 0, 0.7); // Black #000000
+$fg: rgb(133, 172, 251); // Jordy Blue #85acfb
+$bg: rgb(156, 100, 177); // Amethyst #9c64b1
+$transparent: rgba(0,0,0,0);
+
+.bar {
+  // padding: 0.4rem 1rem;
+  // padding-left: 50px;
+  min-width: 20px;
+  // min-height: 2540px;
+  background-color: $mbg;
+  color: $fg;
+  border-radius: 0.6rem;
+  margin: 15px;
+}
+
+.sys-tray {
+  // border: 3px solid $bg;
+  padding: 10px;
+}
+
+.tray-item {
+  all: unset;
+}
+
+.spacer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.clock {
+  font-size: 1.2rem;
+  // font-family: DSEG7 Classic Mini;
+  font-family: terminus;
+  // padding: 2px;
+  margin: 2px;
+}
+
+.clock-box {
+  border: 3px solid $bg;
+  border-radius: 0.3rem;
+}
+
+.uptime {
+  font-size: 18px;
+  font-family: terminus;
+  color: $fg;
+}
+
+.volume {
+  font-size: 1.1rem;
+  margin: 0.3rem;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 1px;
+  font-family: terminus;
+}
+
+.volume trough {
+  all: unset;
+  background-color: $bg;
+  min-width: 36px;
+  min-height: 130px;
+  border-radius: 0.5rem;
+}
+
+.volume trough slider {
+  all: unset;
+  background-color: transparent;
+  border-radius: 0.5rem;
+}
+
+.volume trough highlight {
+  background-color: $fg;
+  border-radius: 0.5rem;
+  margin: 4px;
+}
+
+.monitoring {
+  font-size: 1.1rem;
+  margin: 0.3rem;
+  font-family: terminus;
+}
+
+.monitoring trough {
+  all: unset;
+  background-color: $bg;
+  min-width: 16px;
+  min-height: 80px;
+  border-radius: 0.3rem;
+}
+
+.monitoring trough slider {
+  all: unset;
+  background-color: transparent;
+  border-radius: 0.3rem;
+}
+
+.monitoring trough highlight {
+  background-color: $fg;
+  border-radius: 0.2rem;
+  margin: 3px;
+}
+
+.workspaces {
+  // border-radius: 7rem;
+  padding: 0.5rem;
+  background-color: $transparent;
+}
+
+.workspace {
+  background-color: $bg;
+  color: $transparent;
+  border-radius: 0.5rem;
+  padding:0.4rem;
+  min-width: 1.3rem;
+  min-height: 1.3rem;
+  font-size: 1.55rem;
+  transition: 0.3s;
+
+  &.active {
+    background-color: $fg;
+    min-height: 3.3rem;
+  }
+}
+
+.special {
+  all: unset;
+  font-size: 5rem;
+  color: red;
+}
+
+
+
+
+
+
+
+

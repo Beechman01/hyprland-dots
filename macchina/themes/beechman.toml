@@ -1,0 +1,54 @@
+# Beechman
+
+spacing = 3
+padding = 1
+hide_ascii = false
+prefer_small_ascii = true
+separator = "--"
+separator_color = "cyan"
+key_color = "white"
+
+[pallette]
+type = "Full"
+visible = true
+
+[bar]
+glyph = "o"
+symbol_open = '('
+symbol_close = ')'
+visible = true
+hide_delibiters = false
+
+[box]
+title = "Beechman"
+border = "rounded"
+visible = true
+x = 2
+y = 2
+
+[randomize]
+key_color = false
+separator_color = false
+
+
+[keys]
+host            = "Host"
+kernel          = "Kernel"
+battery         = "Battery"
+os              = "OS"
+de              = "DE"
+wm              = "WM"
+distro          = "Distro"
+terminal        = "Terminal"
+shell           = "Shell"
+packages        = "Packages"
+uptime          = "Uptime"
+memory          = "Memory"
+machine         = "Machine"
+local_ip        = "Local IP"
+backlight       = "Brightness"
+resolution      = "Resolution"
+cpu_load        = "CPU Load"
+cpu             = "CPU"
+gpu             = "GPU"
+disk_space      = "Disk Space"
