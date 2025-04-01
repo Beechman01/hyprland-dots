@@ -1,0 +1,45 @@
+    OpenRGB v0.9
+    Commit:  from 
+    Launched: 20250308_122315
+====================================================================================================
+
+0     |Info:    Found file: Main.orp attempting to validate header
+0     |Info:    Valid v4 profile found for Main
+1005  |Info:    ------------------------------------------------------
+1005  |Info:    |               Start device detection               |
+1005  |Info:    ------------------------------------------------------
+1005  |Info:    Initializing HID interfaces: Success
+1010  |Info:    ------------------------------------------------------
+1010  |Info:    |             Detecting I2C interfaces               |
+1010  |Info:    ------------------------------------------------------
+1010  |Info:    Registering I2C interface: /dev/i2c-3 Device 1022:790B Subsystem: 1043:8877
+1010  |Info:    Registering I2C interface: /dev/i2c-1 Device 1022:790B Subsystem: 1043:8877
+1010  |Info:    Registering I2C interface: /dev/i2c-8 Device 10DE:2704 Subsystem: 10DE:167A
+1010  |Info:    Registering I2C interface: /dev/i2c-6 Device 10DE:2704 Subsystem: 10DE:167A
+1010  |Info:    Registering I2C interface: /dev/i2c-4 Device 10DE:2704 Subsystem: 10DE:167A
+1010  |Info:    Registering I2C interface: /dev/i2c-2 Device 1022:790B Subsystem: 1043:8877
+1010  |Info:    Registering I2C interface: /dev/i2c-0 Device 0000:0000 Subsystem: 0000:0000
+1010  |Info:    Registering I2C interface: /dev/i2c-7 Device 10DE:2704 Subsystem: 10DE:167A
+1010  |Info:    Registering I2C interface: /dev/i2c-5 Device 10DE:2704 Subsystem: 10DE:167A
+1010  |Info:    ------------------------------------------------------
+1010  |Info:    |               Detecting I2C devices                |
+1010  |Info:    ------------------------------------------------------
+2015  |Info:    ------------------------------------------------------
+2015  |Info:    |               Detecting I2C PCI devices            |
+2015  |Info:    ------------------------------------------------------
+2016  |Info:    ------------------------------------------------------
+2016  |Info:    |               Detecting HID devices                |
+2016  |Info:    ------------------------------------------------------
+2034  |Info:    [Sony DualShock 4] Registering RGB controller
+2110  |Info:    [ASUS TUF GAMING X670E-PLUS] Registering RGB controller
+2110  |Info:    ------------------------------------------------------
+2110  |Info:    |            Detecting libusb HID devices            |
+2110  |Info:    ------------------------------------------------------
+2161  |Info:    ------------------------------------------------------
+2161  |Info:    |              Detecting other devices               |
+2161  |Info:    ------------------------------------------------------
+2167  |Info:    ------------------------------------------------------
+2167  |Info:    |                Detection completed                 |
+2167  |Info:    ------------------------------------------------------
+2167  |Info:    Profile loading: Succeeded for Sony DualShock 4 @ HID: /dev/hidraw6
+2167  |Info:    Profile loading: Succeeded for ASUS TUF GAMING X670E-PLUS @ HID: /dev/hidraw5
