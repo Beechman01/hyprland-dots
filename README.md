@@ -1,4 +1,4 @@
-#Hyprland Dotfiles
+# Hyprland Dotfiles
 
 Configurations files for Hyprland.
 
