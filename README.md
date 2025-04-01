@@ -2,11 +2,13 @@
 
 Configurations files for Hyprland.
 
-  Notifications = Dunst 
-  Bar = Ignis 
-  Terminal = Kitty
-  Fetch = Macchina
-  Application Launcher = Rofi Wayland 
-  File Explorer = Yazi
+  | type                 | software     |
+  | -------------------- | ---------
+  | Notifications        | Dunst        |
+  | Bar                  | Ignis        |
+  | Terminal             | Kitty        |
+  | Fetch                | Macchina     |
+  | Application Launcher | Rofi Wayland |
+  | File Explorer        | Yazi         |
 
 
