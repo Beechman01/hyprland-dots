@@ -2,13 +2,13 @@
 
 Configurations files for Hyprland.
 
-  | type                 | software     |
-  | -------------------- | ---------
-  | Notifications        | Dunst        |
-  | Bar                  | Ignis        |
-  | Terminal             | Kitty        |
-  | Fetch                | Macchina     |
-  | Application Launcher | Rofi Wayland |
-  | File Explorer        | Yazi         |
+  |Software     | Purpose              | 
+  | ----------- | -------------------- | 
+  |Dunst        | Notifications        | 
+  |Ignis        | Bar                  | 
+  |Kitty        | Terminal             | 
+  |Macchina     | Fetch                | 
+  |Rofi Wayland | Application Launcher | 
+  |Yazi         | File Explorer        | 
 
 
