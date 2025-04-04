@@ -35,6 +35,11 @@ alias c="clear && macchina"
 alias update="sudo pacman -Syu"
 alias pacman="sudo pacman"
 alias icat="kitten icat"
+alias gitph="git push origin main"
+alias git+="git add"
+
+
+
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
