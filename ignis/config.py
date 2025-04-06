@@ -94,4 +94,4 @@ def bar(monitor: int) -> Widget.Window:
         child=hyprbar(),
     )
 
-bar(2)
+bar(1)
