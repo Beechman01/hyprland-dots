@@ -36,31 +36,31 @@ def formatted_uptime() -> tuple[str, str, str, str]:
 
 def spacer():
     return Widget.Label(
-        css_classes=["uptime"],
+        css_classes=["uptime-label"],
         label="--"
     )
 
 def days():
     return Widget.Label(
-        css_classes=["uptime"],
+        css_classes=["uptime-label"],
         label=Utils.Poll(720_000, lambda self: str(formatted_uptime()[0])).bind("output")
     )
 
 def hours():
     return Widget.Label(
-        css_classes=["uptime"],
+        css_classes=["uptime-label"],
         label=Utils.Poll(1_000, lambda self: str(formatted_uptime()[1])).bind("output")
     )
 
 def minutes():
     return Widget.Label(
-        css_classes=["uptime"],
+        css_classes=["uptime-label"],
         label=Utils.Poll(1_000, lambda self: str(formatted_uptime()[2])).bind("output")
     )
 
 def seconds():
     return Widget.Label(
-        css_classes=["uptime"],
+        css_classes=["uptime-label"],
         label=Utils.Poll(1_000, lambda self: str(formatted_uptime()[3])).bind("output")
     )
 

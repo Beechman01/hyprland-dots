@@ -1,6 +1,7 @@
 * {
-    all: unset;
-    font-weight: bold;
+  all: unset;
+  font-weight: bold;
+  font-family: TerminessTTF Nerd Font Mono;
 }
 
 // Colors from Catppuccin github repo https://github.com/catppuccin/catppuccin
@@ -17,7 +18,8 @@ $transparent: rgba(0,0,0,0);
   background-color: $mbg;
   color: $fg;
   border-radius: 0.6rem;
-  margin: 15px;
+  border: 3px solid $bg;
+  margin: 7px;
 }
 
 .sys-tray {
@@ -35,9 +37,9 @@ $transparent: rgba(0,0,0,0);
 }
 
 .clock {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   // font-family: DSEG7 Classic Mini;
-  font-family: terminus;
+  // font-family: TerminessTTF Nerd Font Mono;
   // padding: 2px;
   margin: 2px;
 }
@@ -47,9 +49,16 @@ $transparent: rgba(0,0,0,0);
   border-radius: 0.3rem;
 }
 
+.uptime-label {
+  font-size: 22px;
+  margin: 2px;
+  color: $fg;
+}
+
 .uptime {
-  font-size: 18px;
-  font-family: terminus;
+  font-size: 20px;
+  // border: 3px solid $bg;
+  border-radius: 0.3rem;
   color: $fg;
 }
 
@@ -59,7 +68,6 @@ $transparent: rgba(0,0,0,0);
   padding-left: 3px;
   padding-right: 3px;
   padding-bottom: 1px;
-  font-family: terminus;
 }
 
 .volume trough {
@@ -85,7 +93,6 @@ $transparent: rgba(0,0,0,0);
 .monitoring {
   font-size: 1.1rem;
   margin: 0.3rem;
-  font-family: terminus;
 }
 
 .monitoring trough {
@@ -109,8 +116,8 @@ $transparent: rgba(0,0,0,0);
 }
 
 .workspaces {
-  // border-radius: 7rem;
   padding: 0.5rem;
+  padding-top: 1rem;
   background-color: $transparent;
 }
 

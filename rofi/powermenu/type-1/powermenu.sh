@@ -18,13 +18,13 @@ uptime="`uptime -p | sed -e 's/up //g'`"
 host=`uname -n`
 
 # Options
-shutdown=' Shutdown'
-reboot=' Reboot'
-lock=' Lock'
-suspend=' Suspend'
-logout=' Logout'
-yes=' Yes'
-no=' No'
+shutdown='󰤂 Shutdown'
+reboot='󰤁 Reboot'
+lock=' Lock'
+suspend='󰒲 Suspend'
+logout='󰗽 Logout'
+yes=' Yes'
+no='❌ No'
 
 # Rofi CMD
 rofi_cmd() {
@@ -36,7 +36,7 @@ rofi_cmd() {
 
 # Confirmation CMD
 confirm_cmd() {
-	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 250px;}' \
+	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 200px;}' \
 		-theme-str 'mainbox {children: [ "message", "listview" ];}' \
 		-theme-str 'listview {columns: 2; lines: 1;}' \
 		-theme-str 'element-text {horizontal-align: 0.5;}' \
@@ -54,7 +54,8 @@ confirm_exit() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+	# echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
+	echo -e "$shutdown\n$reboot\n$logout\n$lock\n$suspend" | rofi_cmd
 }
 
 # Execute Command
@@ -78,7 +79,7 @@ run_cmd() {
 				i3-msg exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
-			elif [[ "$DESKTOP_SESSION" == 'hyprland' ]]; then
+			elif [[ "$XDG_SESSION_DESKTOP" == 'Hyprland' ]]; then
 				hyprctl dispatch exit
 			fi
 		fi

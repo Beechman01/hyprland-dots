@@ -1,2 +1,11 @@
 [manager]
 show_hidden = true
+ratio = [1,3,4]
+sort_dir_first = true
+linemode = "permissions"
+show_symlink = true
+scrolloff = 15
+
+[preview]
+wrap = "no"
+

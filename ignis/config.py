@@ -1,9 +1,5 @@
-import datetime
 
 from ignis.app import IgnisApp
-from ignis.exceptions import HyprlandIPCNotFoundError
-from ignis.services.fetch import FetchService
-from ignis.services.hyprland import HyprlandService
 from ignis.utils import Utils
 from ignis.widgets import Widget
 
@@ -16,7 +12,6 @@ from modules import monitoring
 
 app = IgnisApp.get_default()
 app.apply_css(f"{Utils.get_current_dir()}/style.scss")
-hyprland = HyprlandService.get_default()
 
 workspaces=workspaces.Workspaces()
 volume=volume.volume_box()
@@ -59,9 +54,9 @@ def center_box():
 def bottom_box():
     return Widget.Box(
         vertical=True,
-        # valign="end",
-        # halign="center",
-        # homogeneous=False,
+        valign="end",
+        halign="center",
+        homogeneous=False,
         spacing=5,
         child=[
             uptime,
@@ -81,16 +76,14 @@ def hyprbar():
     )
 
 def bar(monitor: int) -> Widget.Window:
-
     return Widget.Window(
         namespace=f"Hypr-bar-{monitor}",
         monitor=monitor,
         width_request=20,
-        height_request=2530,
+        height_request=2555,
         exclusivity="exclusive",
         anchor=["left"],
         layer="top",
-        # css_classes=["bar"],
         child=hyprbar(),
     )
 

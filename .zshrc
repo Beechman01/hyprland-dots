@@ -35,9 +35,9 @@ alias c="clear && macchina"
 alias update="sudo pacman -Syu"
 alias pacman="sudo pacman"
 alias icat="kitten icat"
-alias gitph="git push origin main"
+alias gitpom="git push origin main"
 alias git+="git add"
-
+alias gs="git status"
 
 
 # Path to your Oh My Zsh installation.
@@ -121,4 +121,4 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-macchina
+macchina && colorscript -e bars
