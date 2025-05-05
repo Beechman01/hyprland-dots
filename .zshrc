@@ -37,7 +37,8 @@ alias pacman="sudo pacman"
 alias icat="kitten icat"
 alias gitpom="git push origin main"
 alias git+="git add"
-alias gs="git status"
+alias gitstat="git status"
+alias lshw="sudo lshw"
 
 
 # Path to your Oh My Zsh installation.
