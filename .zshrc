@@ -31,7 +31,7 @@ alias ls="ls --color"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
-alias c="clear && macchina"
+alias c="clear"
 alias update="sudo pacman -Syu"
 alias pacman="sudo pacman"
 alias icat="kitten icat"
@@ -95,6 +95,27 @@ plugins=(git colored-man-pages zsh-syntax-highlighting zsh-vi-mode)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+
+# git repository greeter
+last_repository=
+check_directory_for_new_repository() {
+ current_repository=$(git rev-parse --show-toplevel 2> /dev/null)
+ 
+ if [ "$current_repository" ] && \
+    [ "$current_repository" != "$last_repository" ]; then
+  onefetch
+ fi
+ last_repository=$current_repository
+}
+cd() {
+ builtin cd "$@"
+ check_directory_for_new_repository
+}
+
+# optional, greet also when opening shell directly in repository directory
+# adds time to startup
+check_directory_for_new_repository
+
 
 #Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then

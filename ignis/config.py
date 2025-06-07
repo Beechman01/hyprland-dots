@@ -1,6 +1,8 @@
+from pynput import keyboard
+from threading import Thread
 
 from ignis.app import IgnisApp
-from ignis.utils import Utils
+from ignis.utils import Utils, socket
 from ignis.widgets import Widget
 
 from modules import workspaces
@@ -9,9 +11,14 @@ from modules import uptime
 from modules import system_tray
 from modules import clock
 from modules import monitoring
+from modules.keybinds import Keybinds
+
+from ignis.services.hyprland import HyprlandService, HyprlandWorkspace
 
 app = IgnisApp.get_default()
 app.apply_css(f"{Utils.get_current_dir()}/style.scss")
+
+hyprland = HyprlandService.get_default()
 
 workspaces=workspaces.Workspaces()
 volume=volume.volume_box()
@@ -87,4 +94,33 @@ def bar(monitor: int) -> Widget.Window:
         child=hyprbar(),
     )
 
+def keys_box():
+    return Widget.Box(
+        vertical=False,
+        css_classes=["bar"],
+        halign="center",
+        child=[
+            Keybinds,
+        ]
+    )
+def keys(monitor: int):
+    return Widget.Window(
+        namespace="Key-Binds",
+        monitor= monitor,
+        width_request=500,
+        height_request=100,
+        exclusivity="ignore",
+        anchor=["bottom"],
+        layer="top",
+        visible=False,
+        child=keys_box()
+    )
+
+
 bar(1)
+keys(2)
+
+
+
+
+

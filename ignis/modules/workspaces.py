@@ -1,5 +1,6 @@
 from ignis.widgets import Widget
 from ignis.services.hyprland import HyprlandService, HyprlandWorkspace
+# from gi.repository import Gtk
 
 hyprland = HyprlandService.get_default()
 
@@ -17,7 +18,8 @@ class WorkspaceButton(Widget.Button):
         
         if workspace.id < 0:
             self.visible = False
-
+        else:
+            self.visible = True
 
 def scroll_workspaces(direction: str) -> None:
     current = hyprland.active_workspace.id
@@ -51,4 +53,7 @@ class Workspaces(Widget.Box):
             ]
         else:
             child = []
+
+
         super().__init__(child=child)
+
