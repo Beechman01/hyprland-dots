@@ -31,22 +31,40 @@ def second():
         ).bind("output"),
     )
 
-def time_back():
+def day():
+    print(datetime.datetime.now().strftime("%d"))
     return Widget.Label(
-        css_classes=["clock-back"],
-        label="00",
+        css_classes=["clock"],
+        label=Utils.Poll(
+            43200000,
+            lambda self: datetime.datetime.now().strftime("%d")
+        ).bind("output"),
     )
 
-def spacer_back():
+def month():
+    print(datetime.datetime.now().strftime("%m"))
     return Widget.Label(
-        css_classes=["clock-back"],
-        label="::"
+        css_classes=["clock"],
+        label=Utils.Poll(
+            43200000,
+            lambda self: datetime.datetime.now().strftime("%m")
+        ).bind("output"),
+    )
+
+def year():
+    print(datetime.datetime.now().strftime("%y"))
+    return Widget.Label(
+        css_classes=["clock"],
+        label=Utils.Poll(
+            43200000,
+            lambda self: datetime.datetime.now().strftime("%y")
+        ).bind("output"),
     )
 
 def spacer():
     return Widget.Label(
         css_classes=["clock"],
-        label="::",
+        label="-",
     )
 
 def clock():
@@ -65,4 +83,31 @@ def clock():
         ]
     )
 
-    
+def date():
+    return Widget.Box(
+        vertical=True,
+        css_classes=["clock-box"],
+        halign="center",
+        valign="center",
+        spacing=1,
+        child=[
+            day(),
+            spacer(),
+            month(),
+            spacer(),
+            year(),
+        ]
+    )
+
+def dateTime():
+    return Widget.Box(
+        vertical=False,
+        css_classes=["clock"],
+        halign="center",
+        valign="center",
+        spacing=0,
+        child=[
+            clock(),
+            date(),
+        ]
+    )

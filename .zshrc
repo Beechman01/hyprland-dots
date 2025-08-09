@@ -26,12 +26,13 @@ bindkey -v
 
 export EDITOR=nvim
 export VISUAL="$EDITOR"
+export BROWSER=/usr/bin/google-chrome-stable
 
 alias ls="ls --color"
 alias ll="ls -l"
 alias la="ls -a"
 alias lla="ls -la"
-alias c="clear"
+alias c="clear && fastfetch"
 alias update="sudo pacman -Syu"
 alias pacman="sudo pacman"
 alias icat="kitten icat"
@@ -39,7 +40,8 @@ alias gitpom="git push origin main"
 alias git+="git add"
 alias gitstat="git status"
 alias lshw="sudo lshw"
-
+alias timeshift="sudo timeshift"
+alias backup="sudo timeshift --create --target /dev/sda2 --comments 'backup before update'"
 
 # Path to your Oh My Zsh installation.
 ZSH=/usr/share/oh-my-zsh/
@@ -143,4 +145,5 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-macchina && colorscript -e bars
+# macchina && colorscript -e bars
+fastfetch
